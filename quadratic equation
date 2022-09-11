@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class calculate {
+    public static void main(String[] args){
+        double a, b, c, D;
+        System.out.println("Имеется уравнение вида: ax^2 + bx + c = 0");
+        System.out.println("Введите a, b и c:");
+        Scanner in = new Scanner(System.in);
+        a = in.nextDouble(); //вводим значение a
+        b = in.nextDouble(); //вводим значение b
+        c = in.nextDouble(); //вводим значение c
+        D = b * b - 4 * a * c;  //считаем дискреминант
+        if (D > 0) {
+            double x1, x2;
+            x1 = (-b - Math.sqrt(D)) / (2 * a); //считаем значение x1
+            x2 = (-b + Math.sqrt(D)) / (2 * a); //считаем значение x2
+            System.out.println("x1 = " + x1 + ", x2 = " + x2);
+        }
+        else if (D == 0) {
+            double x;
+            x = -b / (2 * a); // считаем значение x (при д=0 у нас единственный корень)
+            System.out.println("Уравнение имеет единственный корень x = " + x);
+        }
+        else {
+            System.out.println("нет корней");
+        }
+    }
+}
