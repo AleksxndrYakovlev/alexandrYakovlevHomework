@@ -9,7 +9,7 @@ public class calculate {
         a = in.nextDouble(); //вводим значение a
         b = in.nextDouble(); //вводим значение b
         c = in.nextDouble(); //вводим значение c
-        D = b * b - 4 * a * c;  //считаем дискреминант
+        D = b * b - 4 * a * c;  //считаем дискриминант
         if (D > 0) {
             double x1, x2;
             x1 = (-b - Math.sqrt(D)) / (2 * a); //считаем значение x1
