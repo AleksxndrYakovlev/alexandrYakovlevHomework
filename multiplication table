@@ -1,0 +1,18 @@
+public class Main {
+    public static void main(String[] args) {
+        int[][] table = new int[11][11]; //создаём двумерный массив для записывания в него таблицы умножения
+        for(int i = 0; i < 11; ++i){
+            table[0][i] = i;     //заполняем вверхнюю строчку таблицы умножения значениями от 1 до 10
+        }
+        for(int i = 0; i < 11; ++i){
+            table[i][0] = i;     // аналогично заполняем первый столбик таблицы
+        }
+        for(int i = 1; i < 11; ++i){
+            for(int j = 1; j < 11; ++j){
+                table[i][j] = i*j;  //заполняем всю таблицу числами
+                System.out.print(table[i][j]+ "\t");
+            }
+            System.out.println();
+        }
+    }
+}
